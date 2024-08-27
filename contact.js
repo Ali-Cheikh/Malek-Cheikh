@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('#contact-form').on('submit', function (e) {
         e.preventDefault();
@@ -11,12 +12,13 @@ $(document).ready(function () {
             },
             showConfirmButton: false,
             allowOutsideClick: false,
+            
         });
 
         const formData = new FormData(this);
 
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbyGnOAYgUJ_5IDA3lHeX9jQDfbbSx1j784ieI2prl-050RH1yvqBGu-ymSLsLz_AMdR/exec',
+            url: 'https://script.google.com/macros/s/AKfycbxMo5BDy_OomG3VQUDh9aN4_CZC8gqHTWHxBX9jIet5d0epNulDDq2Kx3YZJrXXLjwu/exec',
             method: 'POST',
             data: formData,
             processData: false,
@@ -26,7 +28,8 @@ $(document).ready(function () {
                     Swal.fire({
                         icon: 'success',
                         title: 'Form submitted!',
-                        text: 'Your message has been received.',
+                        text: 'Your Message has been received.',
+                        
                     });
                     $('#contact-form')[0].reset(); // Reset form after successful submission
                 } else {
@@ -34,6 +37,7 @@ $(document).ready(function () {
                         icon: 'error',
                         title: 'Submission Failed',
                         text: 'There was an error submitting your form. Please try again later.',
+                        
                     });
                 }
             },
@@ -42,6 +46,7 @@ $(document).ready(function () {
                     icon: 'error',
                     title: 'Submission Failed',
                     text: 'There was an error submitting your form. Please check your network connection or try again later.',
+                    
                 });
             }
         });

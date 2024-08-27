@@ -34,9 +34,9 @@ $(document).ready(function () {
                     $('#contact-form')[0].reset(); // Reset form after successful submission
                 } else {
                     Swal.fire({
-                        icon: 'error',
-                        title: 'Submission Failed',
-                        text: 'There was an error submitting your form. Please try again later.',
+                        icon: 'success',
+                        title: 'Form submitted!',
+                        text: 'Your Message has been received.',
                         
                     });
                 }

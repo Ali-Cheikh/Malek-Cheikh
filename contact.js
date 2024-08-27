@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('#contact-form').on('submit', function (e) {
         e.preventDefault();
@@ -12,7 +11,6 @@ $(document).ready(function () {
             },
             showConfirmButton: false,
             allowOutsideClick: false,
-            
         });
 
         const formData = new FormData(this);
@@ -28,8 +26,7 @@ $(document).ready(function () {
                     Swal.fire({
                         icon: 'success',
                         title: 'Form submitted!',
-                        text: 'Your Message has been received.',
-                        
+                        text: 'Your message has been received.',
                     });
                     $('#contact-form')[0].reset(); // Reset form after successful submission
                 } else {
@@ -37,7 +34,6 @@ $(document).ready(function () {
                         icon: 'error',
                         title: 'Submission Failed',
                         text: 'There was an error submitting your form. Please try again later.',
-                        
                     });
                 }
             },
@@ -46,7 +42,6 @@ $(document).ready(function () {
                     icon: 'error',
                     title: 'Submission Failed',
                     text: 'There was an error submitting your form. Please check your network connection or try again later.',
-                    
                 });
             }
         });
